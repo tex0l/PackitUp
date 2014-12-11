@@ -3,20 +3,20 @@
 <script type="text/html" id="check">
 
 {{#suitcase}}<center>
-<div >
+<div>
 <div class="col-xs-12">
 <div class="btn-group-vertical btn-block">	
 <br />
 
 <button type="button"  class="{{check}}" onClick="
 	
-	 if (this.className=='btn btn-warning') {
-	valisees[i].suitcase[{{index}}].check='btn btn-success';
+	 if (this.className=='btn btn-warning btn-block') {
+	valisees[i].suitcase[{{index}}].check='btn btn-success btn-block';
 console.log(valisees[i].suitcase[{{index}}].check);
-	this.className='btn btn-success';
+	this.className='btn btn-success btn-block';
 }	else {
-this.className='btn btn-warning';
-	valisees[i].suitcase[{{index}}].check='btn btn-warning';
+this.className='btn btn-warning btn-block';
+	valisees[i].suitcase[{{index}}].check='btn btn-warning btn-block';
 console.log({{index}}+' -'+valisees[i].suitcase[{{index}}].check);
 }
 
