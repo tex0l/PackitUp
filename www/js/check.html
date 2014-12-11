@@ -1,0 +1,31 @@
+
+<script language="javascript" type="text/javascript" src="index.js"></script>
+<script type="text/html" id="check">
+
+{{#suitcase}}<center>
+<div >
+<div class="col-sm-10">
+<div class="btn-group-vertical btn-block">	
+<br />
+
+<button type="button"  class="{{check}}" onClick="
+	
+	 if (this.className=='btn btn-warning') {
+	valisees[i].suitcase[{{index}}].check='btn btn-success';
+console.log(valisees[i].suitcase[{{index}}].check);
+	this.className='btn btn-success';
+}	else {
+this.className='btn btn-warning';
+	valisees[i].suitcase[{{index}}].check='btn btn-warning';
+console.log({{index}}+' -'+valisees[i].suitcase[{{index}}].check);
+}
+
+
+">{{name}} </button>
+</div>
+</div>
+</div></center>
+{{/suitcase}}
+
+</script>
+

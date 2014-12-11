@@ -1,0 +1,28 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	background-color:grey;
+}
+
+.new{
+	background-color:yellow;
+}
+
+.vec{
+	background-color:white;
+}
+
+.par{
+	background-color:blue;
+}
+
+span.glyphicon-plus {
+    font-size: 2em;
+}
+span.glyphicon-cog {
+    font-size: 2em;
+}
+
+.titreIndex{
+	font-size: 1.8em;
+}
