@@ -245,7 +245,7 @@ function route() {
                             valEnCours.val[0].temp = Math
                                 .round(
                                     met.list[0].main.temp - 273,
-                                    16);
+                                    16)+"°C";
                             console
                                 .log('meteo : '
                                     + valEnCours.val[0].temp);
