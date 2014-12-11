@@ -5,11 +5,11 @@
 				class="glyphicon glyphicon-home"></span></a></li>
  <li><a href="#nouvelleValise"><span class="glyphicon glyphicon-plus"></span></a></li>
  <li class="active"><a href="#parametres"><span class="glyphicon glyphicon-cog"></span></a></li>
-<li><h3><center>{{username}}</center></h3></li>
+<li class="pull-right"><h1 style="margin-top: 10px;"><center>{{username}}</center></h1></li>
 </ul><br />
 <div class="col-sm-3 col-sm-offset-1">
 
-<br />	
+<br />
 			<br />
 			<input type="number"  name='user_id'></imput>
 		</div>
@@ -21,19 +21,19 @@
 </div>
 <br />
 <div class="col-sm-3 col-sm-offset-1">
-<br />	
+<br />
 			<br />
 			<input  name='user_name'></imput>
 		</div>
-<br />	
+<br />
 		<br />
-			<button class="btn btn-success" onclick="ajouter(document.getElementsByName('user_name')[0].value);">Créer mon compte</button>
+			<button class="btn btn-success" onclick="ajouter(document.getElementsByName('user_name')[0].value);">CrÃ©er mon compte</button>
 		</div>
 </div>
 
  </script>
- 
- 
+
+
 <script type="text/html" id="valiseEnCours">
 	<ul class="nav nav-pills">
 		<li><a class="titreIndex" href="#home"><span
@@ -47,11 +47,11 @@
 {{#val}}
 <h3>
 <center>
-{{destination}} -- {{temp}}      
+{{destination}} -- {{temp}}
 <a href="#modify">
-<button type="submit" class="btn btn-primary" 
+<button type="submit" class="btn btn-primary"
 						onClick="">
-							Modifier	
+							Modifier
 					</button>
 </a>
 </center>
@@ -60,7 +60,7 @@
 
 </div>
  </script>
- 
+
  <script type="text/html" id="modify">
 	<ul class="nav nav-pills">
 		<li><a class="titreIndex" href="#home"><span
@@ -74,12 +74,12 @@
 {{#val}}
 <h3>
 <center>
-{{destination}} -- {{temp}}      
+{{destination}} -- {{temp}}
 <a href="#valiseEnCours">
-<button type="submit" class="btn btn-primary" 
+<button type="submit" class="btn btn-primary"
 						onClick="enregistrer()">
 							Enregistrer	</button>
-					
+
 </a>
 </center>
 </h3>
@@ -122,33 +122,31 @@
 
 	<form class="form-horizontal" role="form">
 		<div class="form-group">
-			<label for="destination" id="listePays" class="col-sm-2 control-label">Destination
-				:</label>
-			<div class="col-sm-10">
+			<label for="destination" id="listePays" class="col-sm-2 control-label">Destination :</label>
+			<div class="col-sm-8">
 				<select class="form-control" onchange="indexPaysEnCours(this.value);
 console.log('change');
 " >				<option><i>Choisissez un pays</i></option>
 				{{#countries}}
 				<option >{{name}}</option>
-				
+
 				{{/countries}}
 			</select>
 			</div>
 		</div>
-		
-		
 
-		</div>
+
+
 
 		<div class="form-group">
 			<div class="col-sm-offset-2 col-sm-10">
 				<a href="#valiseEnCours">
-					<button type="submit" class="btn btn-primary" 
+					<button type="submit" class="btn btn-primary"
 						onClick="addValise();">
 
-							Ajouter	
+							Ajouter
 					</button>
-				</a>		
+				</a>
 			</div>
 		</div>
 	</form>

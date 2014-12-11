@@ -1,4 +1,4 @@
-@CHARSET "ISO-8859-1";
+@CHARSET "UTF-8";
 
 body {
 	background-color:grey;
@@ -22,7 +22,6 @@ span.glyphicon-plus {
 span.glyphicon-cog {
     font-size: 2em;
 }
-
 .titreIndex{
 	font-size: 1.8em;
 }

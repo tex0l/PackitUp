@@ -11,13 +11,13 @@
 <button type="button"  class="{{check}}" onClick="
 	
 	 if (this.className=='btn btn-warning') {
-	valisees[i].suitcase[{{index}}].check='btn btn-success';
-console.log(valisees[i].suitcase[{{index}}].check);
+	valise_items_list[i].suitcase[{{index}}].check='btn btn-success';
+console.log(valise_items_list[i].suitcase[{{index}}].check);
 	this.className='btn btn-success';
 }	else {
 this.className='btn btn-warning';
-	valisees[i].suitcase[{{index}}].check='btn btn-warning';
-console.log({{index}}+' -'+valisees[i].suitcase[{{index}}].check);
+	valise_items_list[i].suitcase[{{index}}].check='btn btn-warning';
+console.log({{index}}+' -'+valise_items_list[i].suitcase[{{index}}].check);
 }
 
 

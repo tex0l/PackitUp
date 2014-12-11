@@ -20,7 +20,7 @@ function ajouter(name) {
 					console.log((data[k].id));
 					id=data[k].id;
 				}
-			}alert('Vous avez bien été ajouté, votre ID est : '+id);
+			}alert('Vous avez bien ï¿½tï¿½ ajoutï¿½, votre ID est : '+id);
 		});
 		
 		
@@ -43,8 +43,8 @@ function getUserId(name) {
 var countries = {
 	"countries" : []
 };
-var valisees = {
-	"valisees" : []
+var valise_items_list = {
+	"valise_items_list" : []
 };
 
 var itemsValiseEnCours = {
@@ -124,7 +124,7 @@ function addValise() {
 	}
 	for (k = 0; k < valises.val.length; k++) {
 		if (countries.countries[i].name == valises.val[k].destination) {
-			alert('Vous possédez déjà cette valise'+countries.countries[i].name);
+			alert('Vous possï¿½dez dï¿½jï¿½ cette valise'+countries.countries[i].name);
 			return;
 		}
 	}
@@ -230,8 +230,8 @@ function route() {
 														.log('meteo : '
 																+ valEnCours.val[0].temp);
 
-												if (!valisees[i]) {
-													valisees[i] = {
+												if (!valise_items_list[i]) {
+													valise_items_list[i] = {
 														"suitcase" : []
 													};
 
@@ -252,7 +252,7 @@ function route() {
 																				.log('data :'
 																						+ data.suitcase);
 																		for (k = 0; k < data.suitcase.length; k++) {
-																			valisees[i].suitcase[k] = {
+																			valise_items_list[i].suitcase[k] = {
 																				"index" : k,
 																				"name" : data.suitcase[k].name,
 																				"check" : "btn btn-warning"
@@ -272,7 +272,7 @@ function route() {
 																							page = Mustache
 																									.render(
 																											template,
-																											valisees[i]);
+																											valise_items_list[i]);
 																							document
 																									.getElementById("checkList").innerHTML = page;
 																						},
@@ -295,7 +295,7 @@ function route() {
 																		page = Mustache
 																				.render(
 																						template,
-																						valisees[i]);
+																						valise_items_list[i]);
 																		document
 																				.getElementById("checkList").innerHTML = page;
 																	}, 'html');
@@ -405,8 +405,8 @@ function route() {
 }
 
 function contient(k) {
-	for (l = 0; l < valisees[i].suitcase.length; l++) {
-		if (items.items[k].name == valisees[i].suitcase[l].name) {
+	for (l = 0; l < valise_items_list[i].suitcase.length; l++) {
+		if (items.items[k].name == valise_items_list[i].suitcase[l].name) {
 			return 1;
 		}
 	}
@@ -421,14 +421,14 @@ function classe(k) {
 
 function enregistrer() {
 	console.log('debut de l enregistrement');
-	console.log(JSON.stringify(valisees[i]));
-	valisees[i] = {
+	console.log(JSON.stringify(valise_items_list[i]));
+	valise_items_list[i] = {
 		"suitcase" : []
 	};
 	var compteur = 0;
 	for (k = 0; k < items.items.length; k++) {
 		if (itemsValiseEnCours.items[k].contient == 1) {
-			valisees[i].suitcase[compteur] = {
+			valise_items_list[i].suitcase[compteur] = {
 				"name" : itemsValiseEnCours.items[k].name,
 				"index" : compteur,
 				"id" : itemsValiseEnCours.items[k].id,
@@ -438,7 +438,7 @@ function enregistrer() {
 			compteur++;
 		}
 	}
-	console.log(JSON.stringify(valisees[i]));
+	console.log(JSON.stringify(valise_items_list[i]));
 	window.hash = "#valiseEnCours";
 }
 
